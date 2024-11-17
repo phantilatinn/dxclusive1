@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dxclusive.ClassPage"
+             BackgroundColor="#FFB84D">
+    <ContentPage.Content>
+        <Grid>
+            <!-- Header Section -->
+            <StackLayout Padding="20" HorizontalOptions="FillAndExpand">
+                <ImageButton Source="back_icon.png"
+                             HeightRequest="30"
+                             WidthRequest="30"
+                             HorizontalOptions="Start"
+                             BackgroundColor="Transparent" />
+                <Label Text="CLASS"
+                       HorizontalOptions="Center"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       TextColor="#A00000" />
+            </StackLayout>
+
+            <!-- Main Content Section -->
+            <ScrollView Margin="0,70,0,0">
+                <VerticalStackLayout Padding="20" Spacing="25"> <!-- ปรับ Spacing ให้มากขึ้น -->
+                    <!-- Buttons -->
+                    <Button Text="ปี 1 เทอม 1"
+                            BackgroundColor="#FFE4B3"
+                            TextColor="#3E3E3E"
+                            FontSize="18"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            BorderColor="#A00000"
+                            BorderWidth="1" />
+                    <Button Text="ปี 1 เทอม 2"
+                            BackgroundColor="#FFE4B3"
+                            TextColor="#3E3E3E"
+                            FontSize="18"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            BorderColor="#A00000"
+                            BorderWidth="1" />
+                    <Button Text="ปี 2 เทอม 1"
+                            BackgroundColor="#FFE4B3"
+                            TextColor="#3E3E3E"
+                            FontSize="18"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            BorderColor="#A00000"
+                            BorderWidth="1" />
+                    <Button Text="ปี 2 เทอม 2"
+                            BackgroundColor="#FFE4B3"
+                            TextColor="#3E3E3E"
+                            FontSize="18"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            BorderColor="#A00000"
+                            BorderWidth="1" />
+                    <Button Text="ปี 3 เทอม 1"
+                            BackgroundColor="#FFE4B3"
+                            TextColor="#3E3E3E"
+                            FontSize="18"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            BorderColor="#A00000"
+                            BorderWidth="1" />
+                    <Button Text="ปี 3 เทอม 2"
+                            BackgroundColor="#FFE4B3"
+                            TextColor="#3E3E3E"
+                            FontSize="18"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            BorderColor="#A00000"
+                            BorderWidth="1" />
+                    <Button Text="ปี 4 เทอม 1"
+                            BackgroundColor="#FFE4B3"
+                            TextColor="#3E3E3E"
+                            FontSize="18"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            BorderColor="#A00000"
+                            BorderWidth="1" />
+                    <Button Text="ปี 4 เทอม 2"
+                            BackgroundColor="#FFE4B3"
+                            TextColor="#3E3E3E"
+                            FontSize="18"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            BorderColor="#A00000"
+                            BorderWidth="1" />
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
