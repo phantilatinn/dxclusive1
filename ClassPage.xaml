@@ -1,94 +1,109 @@
-<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="dxclusive.ClassPage"
-             BackgroundColor="#FFB84D">
-    <ContentPage.Content>
-        <Grid>
-            <!-- Header Section -->
-            <StackLayout Padding="20" HorizontalOptions="FillAndExpand">
-                <ImageButton Source="back_icon.png"
-                             HeightRequest="30"
-                             WidthRequest="30"
-                             HorizontalOptions="Start"
-                             BackgroundColor="Transparent" />
-                <Label Text="CLASS"
-                       HorizontalOptions="Center"
-                       FontSize="32"
-                       FontAttributes="Bold"
-                       TextColor="#A00000" />
-            </StackLayout>
+             x:Class="dxclusive.ClassPage">
+    <!-- Set a Linear Gradient Background -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FFD270" Offset="0.0"/> <!-- Light Orange -->
+            <GradientStop Color="#FF914D" Offset="0.5"/> <!-- Mid Orange -->
+            <GradientStop Color="#FF4E00" Offset="1.0"/> <!-- Darker Orange -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
-            <!-- Main Content Section -->
-            <ScrollView Margin="0,70,0,0">
-                <VerticalStackLayout Padding="20" Spacing="25"> <!-- ปรับ Spacing ให้มากขึ้น -->
-                    <!-- Buttons -->
-                    <Button Text="ปี 1 เทอม 1"
-                            BackgroundColor="#FFE4B3"
-                            TextColor="#3E3E3E"
-                            FontSize="18"
-                            CornerRadius="10"
-                            HeightRequest="50"
-                            BorderColor="#A00000"
-                            BorderWidth="1" />
-                    <Button Text="ปี 1 เทอม 2"
-                            BackgroundColor="#FFE4B3"
-                            TextColor="#3E3E3E"
-                            FontSize="18"
-                            CornerRadius="10"
-                            HeightRequest="50"
-                            BorderColor="#A00000"
-                            BorderWidth="1" />
-                    <Button Text="ปี 2 เทอม 1"
-                            BackgroundColor="#FFE4B3"
-                            TextColor="#3E3E3E"
-                            FontSize="18"
-                            CornerRadius="10"
-                            HeightRequest="50"
-                            BorderColor="#A00000"
-                            BorderWidth="1" />
-                    <Button Text="ปี 2 เทอม 2"
-                            BackgroundColor="#FFE4B3"
-                            TextColor="#3E3E3E"
-                            FontSize="18"
-                            CornerRadius="10"
-                            HeightRequest="50"
-                            BorderColor="#A00000"
-                            BorderWidth="1" />
-                    <Button Text="ปี 3 เทอม 1"
-                            BackgroundColor="#FFE4B3"
-                            TextColor="#3E3E3E"
-                            FontSize="18"
-                            CornerRadius="10"
-                            HeightRequest="50"
-                            BorderColor="#A00000"
-                            BorderWidth="1" />
-                    <Button Text="ปี 3 เทอม 2"
-                            BackgroundColor="#FFE4B3"
-                            TextColor="#3E3E3E"
-                            FontSize="18"
-                            CornerRadius="10"
-                            HeightRequest="50"
-                            BorderColor="#A00000"
-                            BorderWidth="1" />
-                    <Button Text="ปี 4 เทอม 1"
-                            BackgroundColor="#FFE4B3"
-                            TextColor="#3E3E3E"
-                            FontSize="18"
-                            CornerRadius="10"
-                            HeightRequest="50"
-                            BorderColor="#A00000"
-                            BorderWidth="1" />
-                    <Button Text="ปี 4 เทอม 2"
-                            BackgroundColor="#FFE4B3"
-                            TextColor="#3E3E3E"
-                            FontSize="18"
-                            CornerRadius="10"
-                            HeightRequest="50"
-                            BorderColor="#A00000"
-                            BorderWidth="1" />
-                </VerticalStackLayout>
-            </ScrollView>
-        </Grid>
-    </ContentPage.Content>
+    <!-- Page Content -->
+    <Grid Padding="20">
+        <!-- Header Section -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Back Button and Title -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" Grid.Row="0">
+            <Button Text="←" 
+                    BackgroundColor="Transparent" 
+                    TextColor="Black" 
+                    FontSize="20" 
+                    HorizontalOptions="Start"
+                    Clicked="OnBackButtonClicked"/>
+            <Label Text="CLASS" 
+                   FontSize="36" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Brown" />
+        </StackLayout>
+
+        <!-- Class List -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="15" VerticalOptions="Start">
+                <!-- Class Buttons -->
+                <Button Text="ปี 1 เทอม 1"
+                        FontSize="18"
+                        TextColor="Black"
+                        BackgroundColor="#FFE6CC"
+                        CornerRadius="15"
+                        Padding="10"
+                        BorderColor="#FF914D"
+                        BorderWidth="2"/>
+                <Button Text="ปี 1 เทอม 2"
+                        FontSize="18"
+                        TextColor="Black"
+                        BackgroundColor="#FFE6CC"
+                        CornerRadius="15"
+                        Padding="10"
+                        BorderColor="#FF914D"
+                        BorderWidth="2"/>
+                <Button Text="ปี 2 เทอม 1"
+                        FontSize="18"
+                        TextColor="Black"
+                        BackgroundColor="#FFE6CC"
+                        CornerRadius="15"
+                        Padding="10"
+                        BorderColor="#FF914D"
+                        BorderWidth="2"/>
+                <Button Text="ปี 2 เทอม 2"
+                        FontSize="18"
+                        TextColor="Black"
+                        BackgroundColor="#FFE6CC"
+                        CornerRadius="15"
+                        Padding="10"
+                        BorderColor="#FF914D"
+                        BorderWidth="2"/>
+                <Button Text="ปี 3 เทอม 1"
+                        FontSize="18"
+                        TextColor="Black"
+                        BackgroundColor="#FFE6CC"
+                        CornerRadius="15"
+                        Padding="10"
+                        BorderColor="#FF914D"
+                        BorderWidth="2"/>
+                <Button Text="ปี 3 เทอม 2"
+                        FontSize="18"
+                        TextColor="Black"
+                        BackgroundColor="#FFE6CC"
+                        CornerRadius="15"
+                        Padding="10"
+                        BorderColor="#FF914D"
+                        BorderWidth="2"/>
+                <Button Text="ปี 4 เทอม 1"
+                        FontSize="18"
+                        TextColor="Black"
+                        BackgroundColor="#FFE6CC"
+                        CornerRadius="15"
+                        Padding="10"
+                        BorderColor="#FF914D"
+                        BorderWidth="2"/>
+                <Button Text="ปี 4 เทอม 2"
+                        FontSize="18"
+                        TextColor="Black"
+                        BackgroundColor="#FFE6CC"
+                        CornerRadius="15"
+                        Padding="10"
+                        BorderColor="#FF914D"
+                        BorderWidth="2"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
